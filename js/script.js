@@ -25,6 +25,14 @@ function clickEvent() {
         } else { 
             alert("Please enter a temperature between -50 and 125.");
             var tempFahr = prompt("What is the temperature today?");
+
+            if (tempFahr > -50 && tempFahr < 54) {
+                var outWear = "a coat";
+            } else if (tempFahr >= 54 && tempFahr <= 70) {
+                var outWear = "a jacket";
+            } else if (tempFahr > 70 && tempFahr < 125) {
+                var outWear = "no jacket";
+            }
         }
 
         var result = "Since it is " + tempFahr + " degrees and you are going to a " + eventType + " event, you should wear " + outfit + " and " + outWear + ".";
